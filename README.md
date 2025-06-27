@@ -1,6 +1,6 @@
 # forward-port.sh
 
-It is util for easily create and remove forward-port services
+Util for easily create and remove forward-port services using autossh
 
 ## Getting started
 

@@ -1,0 +1,11 @@
+[Unit]
+Description=Port forwarding (<NAME>)
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+ExecStart=/opt/forward-port/forward-port.sh <CONN_DATA>
+
+[Install]
+WantedBy=multi-user.target

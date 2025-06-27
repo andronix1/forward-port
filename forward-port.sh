@@ -30,7 +30,7 @@ function check_input() {
 check_input "host" "$SRC_HOST" "$SRC_HOST_RE"
 check_input "target port" "$TARGET_PORT" "$TARGET_PORT_RE"
 
-autossh -M 20000 -NC \
+autossh -M 0 -NC \
 	-o ServerAliveCountMax=3 \
 	-o ServerAliveInterval=60 \
 	-o ExitOnForwardFailure=yes \

@@ -17,6 +17,10 @@ function uninstall() {
 }
 
 function install() {
+    if ! [ -x "$(command -v autossh)" ]; then
+      echo "Error: autossh is not installed"
+      exit 1
+    fi
     mkdir -p $INSTALL_DIR
     cp forward-port.sh $INSTALL_DIR
     chmod +x $INSTALL_DIR/forward-port.sh
